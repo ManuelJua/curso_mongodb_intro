@@ -1,0 +1,15 @@
+use("platzi_store")
+// "651fee98cebd42633aeac622"
+db.products.updateOne(
+    //query
+    {_id:2},
+    //change => operators 
+    {
+        $set:{
+            name:"2 change name",
+            tags: ['A','B']
+        }
+    }
+    )
+
+db.products.find()

@@ -1,0 +1,23 @@
+use("platzi_store")
+
+// db.inventory.find()
+
+// Using $gt (>) and $gte (>=)
+// db.inventory.find({qty:{$gt: 20 }})
+// db.inventory.find({qty:{$gte: 20 }})
+// db.inventory.find({qty:{$lt: 20 }})
+// db.inventory.find({qty:{$gt: 20, $lt:30 }})
+db.inventory.find(
+    {
+        "item.name":
+                {
+                    $ne:"123"
+                },
+
+        qty:
+            {
+                $gt: 10,
+                 $lt:30 
+                }
+    }
+)

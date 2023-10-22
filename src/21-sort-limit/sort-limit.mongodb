@@ -1,0 +1,10 @@
+use("sample_training")
+
+
+//1=0-10,A-Z
+//-1=10-0,Z,A
+db.zips.find({pop:{$gte:100}}
+        ,{pop:1,city:1,_id:0})
+    .sort({pop:-1})
+    .limit(10)
+    .skip(3)

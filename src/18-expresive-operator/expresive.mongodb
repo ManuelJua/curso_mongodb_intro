@@ -1,0 +1,12 @@
+use("platzi_store")
+
+
+//Exprsive operator alows us to compare and do operations with variables
+//like in the following case where we can find the documents
+// where the spent monet surpases the budget 
+
+// db.monthlyBudget.find({
+//     $expr: {
+//         $gte:["$spent","$budget"]
+//     }
+// })
